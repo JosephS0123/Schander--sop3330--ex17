@@ -1,7 +1,11 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 1 Solution
+ *  Copyright 2021 Joseph Schander
+ */
 package org.example;
 
 
-import java.text.DecimalFormat;
+
 import java.util.Scanner;
 
 public class App
@@ -9,7 +13,7 @@ public class App
 
     public static void main( String[] args )
     {
-        DecimalFormat DF = new DecimalFormat("##.##");
+
         Scanner uInput = new Scanner(System.in);
         System.out.println( "Are you male or female? enter 1 for male and 2 for female" );
         byte MorF = uInput.nextByte();
@@ -20,7 +24,7 @@ public class App
         System.out.println("How many hours has it been since your last drink?");
         int Hours = uInput.nextInt();
         double MorF2 = (MorF==1)?.73:.66;
-        Double BAC = (Ounces *5.14/Weight*MorF2)-.015 * Hours;
+        double BAC = (Ounces *5.14/Weight*MorF2)-.015 * Hours;
         System.out.println("Your BAC is "+BAC);
         if(BAC>.08){
             System.out.println("You are not legally allowed to drive");
